@@ -1,0 +1,6 @@
+pop
+push
+reserve
+sort
+indexof
+includes
