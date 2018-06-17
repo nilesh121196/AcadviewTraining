@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var myArray = ["scissor", "paper", "stone"];
+
+var player, randomItem;
+
+var abc;
+function play()
+{
+				player=prompt("Enter your choice between stone, paper and scissor");
+				console.log(player);
+				if(player==null)
+				{
+					alert("Game is Exiting Now!!");
+					return 0;
+				}
+				if(player=="scissor" || player=="stone" || player=="paper")
+				{
+					randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+					alert(randomItem);
+				}
+				else
+				{
+					//randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+					alert("Enter Correct Value");
+					return 1;
+				}
+
+				
+				if((randomItem=="scissor" && player=="paper") || (randomItem=="stone" && player=="scissor") ||(randomItem=="paper" && player=="stone"))
+				{
+					alert("You lose");
+					abc="lose";
+				}
+				if((randomItem=="scissor" && player=="stone") || (randomItem=="stone" && player=="paper") || (randomItem=="paper" && player=="scissor"))
+				{
+					alert("You Win");
+					abc="win";
+				}
+				
+				if(abc=="win" || abc=="lose")
+				{
+					return 0;
+				}
+				else
+				{
+					alert("Draw");
+					play();
+				}
+					
+}
+
+
+ 
+ 				
+
+	
+</script>
+</head>
+<body>
+<button onclick="play()">Play</button>
+</body>
+</html>

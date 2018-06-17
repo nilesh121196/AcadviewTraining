@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Dice Game</title>
+</head>
+<body>
+<script type="text/javascript">
+function play(){
+			var val = prompt("Enter any value between 1 to 6");
+			var num = Math.floor(Math.random() * 6 + 1);
+			if (val==null || val =="") {
+				
+				alert("Please Enter Value, Game is Existing Now!!")
+				return 0;
+			}
+			var val1 = parseInt(val);
+			console.log(val1);
+			if(val<1 || val>6)
+			{
+					alert("Please Enter the value between 1-6");
+					play();
+			}
+			else
+			{
+					if(val==num) 
+					alert("You Won, The Number was "+num);
+					else
+					alert("You Lose, The Number was "+num);
+			}
+	}
+
+</script>
+
+
+<button onclick="play()">Play Now</button>
+</body>
+</html>

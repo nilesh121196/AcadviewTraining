@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<style>
+#myDIV {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+</style>
+
+
+<script>
+function sub() {
+	var un1 = document.getElementById("un").value;
+	var ur1 = document.getElementById("ur").value;
+	var um1 = document.getElementById("um").value;
+    var para = document.createElement("P");
+    para.innerHTML = '<div class="row"><div class="col s12 m6"><div class="card blue-grey darken-1"><div class="card-content white-text"><span class="card-title">Your Detail</span>           <h6>Name : '+un1.toString()+'</h6>           <h6>Roll No : '+ur1.toString()+'</h6>           <h6>Marks : '+um1.toString()+'</h6>        </div>      </div>    </div>  </div>';
+    document.getElementById("sd").appendChild(para);
+}
+</script>
+</head>
+<body>
+
+
+
+<div class="w3-container w3-red">
+  <h2>Enter Details</h2>
+</div>
+
+<form class="w3-container" method="POST" action="#">
+	<p>
+  <label>Name</label>
+  <input id="un" class="w3-input" type="text" required="required"></p>
+  <p>
+  <label>Roll No</label>
+  <input id="ur" class="w3-input" type="text" required="required"></p>
+  <p>
+  <label>Marks</label>
+  <input id="um" class="w3-input" type="number" required="required"></p>
+  <p>
+  	<input class="w3-btn w3-red" onclick="sub()" type="button" name="Submit" value="Submit" >
+  </p>
+</form>
+
+<div id="sd"></div>
+
+
+ <!-- <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Your Detail</span>
+           <h5>Name : </h5>
+           <h5>Roll No : </h5>
+           <h5>Marks : </h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</body>
+</html>
