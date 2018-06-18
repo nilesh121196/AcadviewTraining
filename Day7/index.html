@@ -32,7 +32,7 @@ function sub() {
   <h2>Enter Details</h2>
 </div>
 
-<form class="w3-container" method="POST" action="#">
+<form class="w3-container" onsubmit="sub()">
 	<p>
   <label>Name</label>
   <input id="un" class="w3-input" type="text" required="required"></p>
@@ -43,7 +43,7 @@ function sub() {
   <label>Marks</label>
   <input id="um" class="w3-input" type="number" required="required"></p>
   <p>
-  	<input class="w3-btn w3-red" onclick="sub()" type="button" name="Submit" value="Submit" >
+  	<input class="w3-btn w3-red"  type="submit" name="Submit" value="Submit" >
   </p>
 </form>
 
